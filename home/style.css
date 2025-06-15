@@ -56,6 +56,53 @@ footer i:hover{
   background-color: white;
   animation: fade 0.5s linear;
 }
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+    
+  }
+}
+@keyframes fadeTwo {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    
+  }
+}
+@keyframes width {
+  from {
+    width: 0;
+  }
+  to {
+   width: 100%;
+  }
+}
+.nav-link {
+  position: relative;
+  overflow: hidden;
+}
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0;
+  background: lightgreen;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
 .news_card{
    box-shadow: 0px 0px 30px 0px grey;
    letter-spacing: 1px;
@@ -120,26 +167,6 @@ footer i:hover{
   z-index: 3 !important;
 }
 
-@keyframes fade {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-    
-  }
-}
-@keyframes fadeTwo {
-  from {
-    opacity: 1;
-  }
-
-  to {
-    opacity: 0;
-    
-  }
-}
 .fade2{
   animation: fadeTwo 1s linear;
 }
@@ -275,7 +302,9 @@ footer i:hover{
    input, footer button{
     width: 95%;
    }
-  
+  .nav-link:hover::after {
+  width: 14%;
+}
 }
 /* phones styles ends */
 
