@@ -303,7 +303,7 @@ footer i:hover{
     width: 95%;
    }
   .nav-link:hover::after {
-  width: 14%;
+  width: 30%;
 }
 }
 /* phones styles ends */
